@@ -104,9 +104,8 @@ const worker: ExportedHandler = {
 		if (redirectUrl) {
 			return Response.redirect(redirectUrl, 302);
 		}
-		return new Response('Workers.new');
 
-		// return Response.redirect('https://dash.cloudflare.com/?to=/:account/workers/services/new', 302);
+		return Response.redirect('https://dash.cloudflare.com/?to=/:account/workers/services/new', 302);
 	},
 };
 
@@ -202,12 +201,12 @@ function getListHTML(redirects: Redirects) {
 		padding: 10px;
 		border: 1px dotted #f1740a;
 		background: #fef1e6;
-		font-color: #fff;
 		border-radius: 5px;
 	}
 
 	.link:hover {
 		background: #f1740a;
+		color: #fff;
 	}
 
 	.card-title {
